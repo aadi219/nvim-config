@@ -6,3 +6,5 @@ vim.cmd('set nu')
 vim.cmd('set relativenumber')
 
 vim.g.mapleader = " "
+
+vim.keymap.set("n", "<C-n>", ":tabnew <CR>")

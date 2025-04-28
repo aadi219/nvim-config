@@ -1,14 +1,17 @@
 return {
     {    "williamboman/mason.nvim",
-        config = function()
-            require('mason').setup()
+        opts = {
+            ensure_installed = { "prettier" },
+        },
+        config = function(_, opts)
+            require('mason').setup(opts)
         end
     },
     {
         'williamboman/mason-lspconfig.nvim',
         config = function()
             require('mason-lspconfig').setup({
-                ensure_installed = { 'lua_ls', 'eslint', 'tsserver', }
+                ensure_installed = { 'lua_ls', 'eslint', 'ts_ls', }
             })
         end
     },
