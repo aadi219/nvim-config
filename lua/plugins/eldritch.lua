@@ -12,7 +12,6 @@ return {
     },
     config = function(_, opts)
         require("eldritch").setup(opts)
-        vim.cmd[[colorscheme eldritch]]
     end
 }
 
